@@ -1,10 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Admin Page</title>
-    </head>
-<body>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/chefs_kiss_logo.svg" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page</title>
+</head>
 
+<body >
+    <header class="w-full h-20 bg-[#F7F7FF] flex justify-between items-center px-5 font-bold">
+        <a href="index.html" class="flex items-center gap-[1rem]">
+            <img src="assets/logo/chefs_kiss_logo.svg" alt="chefs-kiss-logo" class="h-10 w10">
+            <h1 class="font-logo text-4xl tracking-wider text-[#7DAA92]">Chefs kiss</h1>
+        </a>
+        <a href="admin.html" class="text-[#7DAA92] font-primary">Admin page</a>
+    </header>
+
+    <main class="w-full min-h-screen flex flex-col items-center font-primary">
+<!--      user details-->
+        <section class="w-full flex flex-col items-center gap-4 mt-[4rem] font-primary">
+            <img src="assets/images/master_chef.jpg" alt="Profile picture" class="size-[10vw] object-cover rounded-[100px]">
+            <h2 class="text-3xl font bold">CurryKing</h2>
+            <p class="w-1/2 font-sans text-center">I am an expert in Indian cuisine, blending traditional flavors with modern twists. From spicy curries to fragrant biryanis, my dishes celebrate the rich diversity of India’s food culture.</p>
+        </section>
+
+<!--        list of dishes-->
+        <section class="mt-[4rem] w-[80vw] flex flex-col gap-4">
+            <h2 class="mb-8 font font-bold text-xl border-b border-gray-300">My Dishes</h2>
+            <div class="w-full flex justify-between gap-4 bg-[#F7F7FF] px-4 rounded-lg">
+                <a href="result.html" class="w-fit flex gap-4">
+                    <img src="assets/images/tikka%20masala.jpeg" alt="dish image" class="rounded-[10px] w-1/10 object-cover">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-bold">Chicken Tikka Masala</h3>
+                        <p class="font-sans font-light text-[12px]">2025-15-04</p>
+                    </div>
+                </a>
+                <div class="flex gap-4 items-center">
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Edit</button>
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Delete</button>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-between gap-4 bg-[#F7F7FF] px-4 rounded-lg">
+                <a href="result.html" class="w-fit flex gap-4">
+                    <img src="assets/images/tikka%20masala.jpeg" alt="dish image" class="rounded-[10px] w-1/10 object-cover">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-bold">Chicken Tikka Masala</h3>
+                        <p class="font-sans font-light text-[12px]">2025-15-04</p>
+                    </div>
+                </a>
+                <div class="flex gap-4 items-center">
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Edit</button>
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Delete</button>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-between gap-4 bg-[#F7F7FF] px-4 rounded-lg">
+                <a href="result.html" class="w-fit flex gap-4">
+                    <img src="assets/images/tikka%20masala.jpeg" alt="dish image" class="rounded-[10px] w-1/10 object-cover">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="font-bold">Chicken Tikka Masala</h3>
+                        <p class="font-sans font-light text-[12px]">2025-15-04</p>
+                    </div>
+                </a>
+                <div class="flex gap-4 items-center">
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Edit</button>
+                    <button class="bg-[#7DAA92] text-white h-8 w-fit px-2 rounded-md hover:cursor-pointer hover:bg-[#6b977f]">Delete</button>
+                </div>
+            </div>
+        </section>
+
+<!--        create new dish-->
+        <section class="w-full flex flex-col items-center gap-4 mt-[4rem] font-primary">
+            <h2 class="text-3xl font bold">Create New Dish</h2>
+            <form action="#" method="POST" enctype="multipart/form-data" class="w-[80vw] flex flex-col gap-4 bg-[#F7F7FF] p-6 rounded-xl shadow">
+                <div class="flex flex-col">
+                    <label for="title" class="text-[#082B35] font-semibold mb-1">Title</label>
+                    <input type="text" id="title" name="title" required minlength="3" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92]" />
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="image" class="text-[#082B35] font-semibold mb-1">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92]" />
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="author" class="text-[#082B35] font-semibold mb-1">Author</label>
+                    <input type="text" id="author" name="author" required minlength="3" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92]" />
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="description" class="text-[#082B35] font-semibold mb-1">Brief Description</label>
+                    <textarea id="description" name="description" required minlength="5" rows="4" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92] resize-none"></textarea>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="ingredients" class="text-[#082B35] font-semibold mb-1">Ingredients</label>
+                    <textarea id="ingredients" name="ingredients" required minlength="10" rows="5" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92] resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="self-start bg-[#7DAA92] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#6b977f] transition hover:cursor-pointer">
+                    Create Recipe
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="w-full h-60 bg-[#7DAA92] mt-[4rem] p-[4rem] flex justify-between font-primary">
+        <ul class=" flex flex-col text-[#F7F7FF] text-[20px] gap-[1rem]">
+            <li>Contact Us</li>
+            <li>About Us</li>
+            <li>&#169; Fillip Schjølberg Husebø 2025</li>
+        </ul>
+        <ul class=" flex flex-col text-[#F7F7FF] text-[20px] gap-[1rem]">
+            <li>Legal Policies</li>
+            <li>Terms of Service</li>
+            <li>Pricacy Policy</li>
+        </ul>
+        <ul class=" flex flex-col text-[#F7F7FF] text-[20px] gap-[1rem]">
+            <li>Follow us on:</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+        </ul>
+    </footer>
 </body>
 </html>
