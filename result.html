@@ -24,9 +24,11 @@
             <div class="md:w-1/2 w-full flex flex-col items-start gap-[1rem]">
                 <img src="assets/images/tikka%20masala.jpeg" alt="image of dish" class="rounded-[35px] object-cover w-full h-[50vh]">
                 <h2 class="text-[2rem] text-[#082B35] font-bold">Chicken Tikka Masala</h2>
+                <div class="flex justify-between w-full font-semibold">
+                    <p class="text-[#787E8E] text-sm font-sans">Created by CurryKing</p>
+                    <p class="text-[#787E8E] text-sm font-sans">2025-15-04</p>
+                </div>
                 <p class="text-[#787E8E] font-sans">Tikka Masala is a popular Indian-inspired dish made with marinated pieces of meat (usually chicken) cooked in a creamy, spiced tomato-based sauce. It's known for its rich flavor, vibrant orange color, and smooth texture, often served with rice or naan.</p>
-                <p class="text-[#787E8E] text-sm font-sans">Created by CurryKing</p>
-                <p class="text-[#787E8E] text-sm font-sans">2025-15-04</p>
             </div>
 
             <!-- Ingredients & Steps -->
@@ -63,7 +65,7 @@
 
                 <!-- Steps -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xl text-[#082B35] font-bold font-primary">Step by Step</h3>
+                    <h3 class="text-2xl text-[#082B35] font-bold font-primary">Step by Step</h3>
                     <ol class="list-decimal pl-5 space-y-2">
                         <li>
                             <strong>Marinate the Chicken:</strong>
@@ -104,6 +106,27 @@
                         </li>
                     </ol>
                 </div>
+
+                <!--        comment-->
+                <section class="mt-[4rem] w-[80vw] md:w-full font-primary">
+                    <h3 class="text-2xl font-bold text-[#082B35] mb-4">Leave a Comment</h3>
+                    <form action="#" method="POST" class="flex flex-col gap-4 bg-[#F7F7FF] p-6 rounded-xl shadow">
+                        <div class="flex flex-col">
+                            <label for="name" class="text-[#082B35] font-semibold mb-1">Name</label>
+                            <input type="text" id="name" name="name" required minlength="3" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92]" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="message" class="text-[#082B35] font-semibold mb-1">Message</label>
+                            <textarea id="message" name="message" required minlength="5" rows="5" class="border border-gray-300 rounded px-3 py-2 text-[#082B35] focus:outline-none focus:ring-2 focus:ring-[#7DAA92] resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="self-start bg-[#7DAA92] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#6b977f] transition">
+                            Submit
+                        </button>
+                    </form>
+                </section>
             </div>
         </section>
     </main>
